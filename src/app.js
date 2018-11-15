@@ -1,7 +1,7 @@
-import a from './a';
-import b from './b';
-import c from './c';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-a();
-b();
-c();
+ReactDOM.render(
+    <div>React test</div>,
+    document.getElementById('root')
+);
