@@ -24,6 +24,14 @@ module.exports = {
                         presets :['react']
                     }
                 }]
+            },
+            {
+                test : /\.css$/,
+                use : ['style-loader','css-loader']
+            },
+            {
+                test : /(\.gif|\.jpeg|\.png|\.jpg|\.bmp)$/,
+                use : ['file-loader']
             }
         ]
     },
