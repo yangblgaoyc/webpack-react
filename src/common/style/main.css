@@ -1,6 +1,18 @@
+@font-face {
+    /*font-family: 'f';*/
+    /*src : url('../fonts/fontawesome-webfont.ttf')*/
+}
+
 body{
     font-size: 20px;
     color: #00ffff;
-    background: url("../img/750-334.jpg") no-repeat;
+    background: #0000ff;
+    /*background: url("../img/750-334.jpg") no-repeat;*/
     background-size: 100%;
+}
+:local .ot{
+    background: #675;
+}
+:local .ot .ac{
+    font-size: 80px;
 }

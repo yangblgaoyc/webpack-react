@@ -27,10 +27,35 @@ module.exports = {
             },
             {
                 test : /\.css$/,
-                use : ['style-loader','css-loader']
+                use : [
+                    'style-loader',
+                    {
+                        loader:'css-loader',
+                        options :{
+                            modules : true
+                        }
+                    }
+                ]
             },
+            // {
+            //     test : /(\.gif|\.jpeg|\.png|\.jpg|\.bmp)$/,
+            //     use : ['file-loader']
+            // }
+            //url-loader为增强版file-loader，会把配置选项里小于limit值kb的图片转换成base64直接输出
             {
-                test : /(\.gif|\.jpeg|\.png|\.jpg|\.bmp)$/,
+                test : /\.(gif|jpeg|png|jpg|bmp)$/,
+                use : [
+                    {
+                        loader :'url-loader',
+                        options : {
+                            limit : 10000
+                        }
+                    }
+                ]
+            },
+            //字体loader配置
+            {
+                test : /\.(ttf|eot|woff|woff2|svg|otfg)$/,
                 use : ['file-loader']
             }
         ]
