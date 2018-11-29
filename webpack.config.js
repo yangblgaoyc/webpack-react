@@ -1,6 +1,7 @@
 const path = require('path')
 const htmlWebpack = require('html-webpack-plugin');
-
+//scss-loader依赖node-scss,所以要一起安装
+//less-loader依赖less,所以要一起安装
 module.exports = {
     entry : './src/app.js',
     output : {
@@ -25,6 +26,7 @@ module.exports = {
                     }
                 }]
             },
+            //localIdentName : '[path]-[name]-[local]-[hash:base64:6]'
             {
                 test : /\.css$/,
                 use : [
@@ -32,9 +34,50 @@ module.exports = {
                     {
                         loader:'css-loader',
                         options :{
-                            modules : true
+                            modules : true,
+                            localIdentName : '[path]-[name]-[local]-[hash:base64:6]'
                         }
                     }
+                ],
+                exclude : [
+                    path.resolve(__dirname,'node_modules'),
+                    path.resolve(__dirname,'src/common'),
+                ]
+            },
+            {
+                test : /\.css$/,
+                use : ['style-loader','css-loader'],
+                include : [
+                    path.resolve(__dirname,'node_modules'),
+                    path.resolve(__dirname,'src/common'),
+                ]
+            },
+
+
+            {
+                test : /\.scss$/,
+                use : [
+                    'style-loader',
+                    {
+                        loader:'css-loader',
+                        options :{
+                            modules : true,
+                            localIdentName : '[path]-[name]-[local]-[hash:base64:6]'
+                        }
+                    },
+                    'sass-loader'
+                ],
+                exclude : [
+                    path.resolve(__dirname,'node_modules'),
+                    path.resolve(__dirname,'src/common'),
+                ]
+            },
+            {
+                test : /\.scss$/,
+                use : ['style-loader','css-loader', 'sass-loader'],
+                include : [
+                    path.resolve(__dirname,'node_modules'),
+                    path.resolve(__dirname,'src/common'),
                 ]
             },
             // {

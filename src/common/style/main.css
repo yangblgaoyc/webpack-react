@@ -10,9 +10,7 @@ body{
     /*background: url("../img/750-334.jpg") no-repeat;*/
     background-size: 100%;
 }
-:local .ot{
+.ot{
     background: #675;
-}
-:local .ot .ac{
-    font-size: 80px;
+    font-size: 50px;
 }
