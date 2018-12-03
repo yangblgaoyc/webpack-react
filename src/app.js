@@ -7,7 +7,6 @@ import 'font-awesome/css/font-awesome.css';
 import plane from './common/img/timg.jpeg';
 import WechatIMG29 from './common/img/WechatIMG29.jpeg';
 // const screen = require('./common/img/screen.png');
-console.log(style)
 
 ReactDOM.render(
     <div className='ret'>
@@ -21,7 +20,7 @@ ReactDOM.render(
         {/*<img src={plane} alt='' />*/}
         {/*<img src={WechatIMG29} alt='' />*/}
         {/*<img src={screen} alt='' />*/}
-        {/*<img src={require('./common/img/screen.png')} alt='' />*/}
+        <img src={require('./common/img/screen.png')} alt='' />
     </div>,
     document.getElementById('root')
 );
