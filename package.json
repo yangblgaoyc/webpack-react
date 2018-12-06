@@ -1,0 +1,49 @@
+{
+  "name": "webpack-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack",
+    "start": "webpack-dev-server",
+    "babel": "babel src/appBabel.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yangblgaoyc/webpack-react.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yangblgaoyc/webpack-react/issues"
+  },
+  "homepage": "https://github.com/yangblgaoyc/webpack-react#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-transform-arrow-functions": "^7.0.0",
+    "@babel/plugin-transform-classes": "^7.1.0",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "clean-webpack-plugin": "^1.0.0",
+    "css-loader": "^1.0.1",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.10.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  }
+}
